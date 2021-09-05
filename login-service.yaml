@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      bb: login-service
   template:
     metadata:
       labels:
-        bb: web
+        bb: login-service
     spec:
       containers:
       - name: login-service
@@ -26,7 +26,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    bb: web
+    bb: login-service
   ports:
   - port: 80
     targetPort: 8080

@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      bb: admin-service
   template:
     metadata:
       labels:
-        bb: web
+        bb: admin-service
     spec:
       containers:
       - name: admin-service
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    bb: web
+    bb: admin-service
   ports:
   - port: 80
     targetPort: 8080

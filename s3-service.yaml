@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      bb: s3-service
   template:
     metadata:
       labels:
-        bb: web
+        bb: s3-service
     spec:
       containers:
       - name: s3-service
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    bb: web
+    bb: s3-service
   ports:
   - port: 80
     targetPort: 8080
