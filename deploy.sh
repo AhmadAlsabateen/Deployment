@@ -21,7 +21,14 @@ docker push $DOCKER_HUB_USERNAME/$LOGIN_SERVICE
 docker push $DOCKER_HUB_USERNAME/$S3_SERVICE
 
 
-kubectl apply -f tomcat-test.yaml
+
+
+#Deploy
+kubectl apply -f admin-service.yaml
+kubectl apply -f user-service.yaml
+kubectl apply -f login-service.yaml
+kubectl apply -f s3-service.yaml
+
 kubectl get deployments
 kubectl get services
 

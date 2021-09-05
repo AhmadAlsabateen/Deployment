@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bb-demo
+  name: admin-service-deployment
   namespace: default
 spec:
   replicas: 1
@@ -16,17 +16,11 @@ spec:
       containers:
       - name: admin-service
         image: ahmad2sabateen/admin-service
-      - name: user-service
-        image: ahmad2sabateen/user-service
-      - name: login-service
-        image: ahmad2sabateen/login-service
-      - name: s3-service
-        image: ahmad2sabateen/s3-service
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: bb-entrypoint
+  name: admin-service-entrypoint
   namespace: default
 spec:
   type: LoadBalancer

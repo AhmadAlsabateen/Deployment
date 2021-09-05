@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-service-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: web
+  template:
+    metadata:
+      labels:
+        bb: web
+    spec:
+      containers:
+      - name: login-service
+        image: ahmad2sabateen/login-service
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: login-service-entrypoint
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    bb: web
+  ports:
+  - port: 80
+    targetPort: 8080
