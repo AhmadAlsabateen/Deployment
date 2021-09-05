@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bb-site
-        image: docker.io/ahmad2sabateen/tomcat-redis
+        image: tomcat:latest
 ---
 apiVersion: v1
 kind: Service
