@@ -14,8 +14,14 @@ spec:
         bb: web
     spec:
       containers:
-      - name: bb-site
-        image: ahmad2sabateen/tomcat-redis
+      - name: admin-service
+        image: ahmad2sabateen/admin-service
+      - name: user-service
+        image: ahmad2sabateen/user-service
+      - name: login-service
+        image: ahmad2sabateen/login-service
+      - name: s3-service
+        image: ahmad2sabateen/s3-service
 ---
 apiVersion: v1
 kind: Service
