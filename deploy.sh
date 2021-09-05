@@ -3,6 +3,7 @@
 DOCKER_HUB_USERNAME=ahmad2sabateen
 
 
+# Services 
 ADMIN_SERVICE=admin-service
 USER_SERVICE=user-service
 LOGIN_SERVICE=login-service
@@ -22,6 +23,11 @@ docker push $DOCKER_HUB_USERNAME/$USER_SERVICE
 docker push $DOCKER_HUB_USERNAME/$LOGIN_SERVICE
 docker push $DOCKER_HUB_USERNAME/$S3_SERVICE
 docker push $DOCKER_HUB_USERNAME/$DB_SERVER
+
+
+kubectl apply -f tomcat-test.yaml
+kubectl get deployments
+kubectl get services
 
 
 
