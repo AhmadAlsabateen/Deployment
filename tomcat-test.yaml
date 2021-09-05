@@ -23,10 +23,9 @@ metadata:
   name: bb-entrypoint
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     bb: web
   ports:
-  - port: 8080
+  - port: 80
     targetPort: 8080
-    nodePort: 30001
