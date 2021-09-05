@@ -23,7 +23,7 @@ metadata:
   name: bb-entrypoint
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     bb: web
   ports:
