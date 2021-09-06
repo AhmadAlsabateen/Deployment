@@ -10,7 +10,7 @@ metadata:
 spec:
   rules:
     - http:
-        paths
+        paths:
           - path: /Auth/*
             backend:
               serviceName: login-service-entrypoint
