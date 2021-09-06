@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: admin-service
-        image: ahmad2sabateen/admin-service:latest
+        image: {image-value}
         imagePullPolicy: Always
 
 ---

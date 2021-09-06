@@ -1,31 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service-deployment
+  name: login-service-deployment
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: user-service
+      bb: login-service
   template:
     metadata:
       labels:
-        bb: user-service
+        bb: login-service
     spec:
       containers:
-      - name: user-service
-        image: ahmad2sabateen/user-service:latest
-        imagePullPolicy: Always        
+      - name: login-service
+        image: {image-value}
+        imagePullPolicy: Always
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: user-service-entrypoint
+  name: login-service-entrypoint
   namespace: default
 spec:
   selector:
-    bb: user-service
+    bb: login-service
   ports:
   - port: 80
     targetPort: 8080

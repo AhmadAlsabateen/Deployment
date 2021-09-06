@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: s3-service
-        image: ahmad2sabateen/s3-service:latest
+        image: {image-value}
         imagePullPolicy: Always
         
 ---
