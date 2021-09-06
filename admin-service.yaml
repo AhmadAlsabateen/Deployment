@@ -25,7 +25,6 @@ metadata:
   name: admin-service-entrypoint
   namespace: default
 spec:
-  type: NodePort
   selector:
     bb: admin-service
   ports:

@@ -25,7 +25,6 @@ metadata:
   name: s3-service-entrypoint
   namespace: default
 spec:
-  type: NodePort
   selector:
     bb: s3-service
   ports:

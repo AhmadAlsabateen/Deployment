@@ -24,7 +24,6 @@ metadata:
   name: user-service-entrypoint
   namespace: default
 spec:
-  type: NodePort
   selector:
     bb: user-service
   ports:
