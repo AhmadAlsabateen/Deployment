@@ -28,10 +28,10 @@ S3_SERVICE_DIGEST=`docker inspect --format='{{index .RepoDigests 0}}' $DOCKER_HU
 
 
 #Fill Values
-sed 's/{image-value}/$ADMIN_SERVICE_DIGEST/' admin-service-template.yaml > admin-service.yaml
-sed 's/{image-value}/$USER_SERVICE_DIGEST/' user-service-template.yaml > user-service.yaml
-sed 's/{image-value}/$S3_SERVICE_DIGEST/' s3-service-template.yaml > s3-service.yaml
-sed 's/{image-value}/$LOGIN_SERVICE_DIGEST/' login-service-template.yaml > login-service.yaml
+sed "s|{image-value}|$ADMIN_SERVICE_DIGEST|" admin-service-template.yaml > admin-service.yaml
+sed "s|{image-value}|$USER_SERVICE_DIGEST|" user-service-template.yaml > user-service.yaml
+sed "s|{image-value}|$S3_SERVICE_DIGEST|" s3-service-template.yaml > s3-service.yaml
+sed "s|{image-value}|$LOGIN_SERVICE_DIGEST|" login-service-template.yaml > login-service.yaml
 
 
 #Deploy
