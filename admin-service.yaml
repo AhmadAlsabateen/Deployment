@@ -16,6 +16,8 @@ spec:
       containers:
       - name: admin-service
         image: ahmad2sabateen/admin-service:latest
+        imagePullPolicy: Always
+
 ---
 apiVersion: v1
 kind: Service
@@ -23,7 +25,7 @@ metadata:
   name: admin-service-entrypoint
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     bb: admin-service
   ports:

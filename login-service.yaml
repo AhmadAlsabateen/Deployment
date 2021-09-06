@@ -16,6 +16,7 @@ spec:
       containers:
       - name: login-service
         image: ahmad2sabateen/login-service:latest
+        imagePullPolicy: Always
 
 ---
 apiVersion: v1
@@ -24,7 +25,7 @@ metadata:
   name: login-service-entrypoint
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     bb: login-service
   ports:

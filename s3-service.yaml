@@ -16,6 +16,8 @@ spec:
       containers:
       - name: s3-service
         image: ahmad2sabateen/s3-service:latest
+        imagePullPolicy: Always
+        
 ---
 apiVersion: v1
 kind: Service
@@ -23,7 +25,7 @@ metadata:
   name: s3-service-entrypoint
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     bb: s3-service
   ports:

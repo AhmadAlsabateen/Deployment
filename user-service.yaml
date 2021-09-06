@@ -16,6 +16,7 @@ spec:
       containers:
       - name: user-service
         image: ahmad2sabateen/user-service:latest
+        imagePullPolicy: Always        
 ---
 apiVersion: v1
 kind: Service
@@ -23,7 +24,7 @@ metadata:
   name: user-service-entrypoint
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     bb: user-service
   ports:
