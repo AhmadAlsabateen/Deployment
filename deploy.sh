@@ -39,8 +39,10 @@ kubectl apply -f admin-service.yaml
 kubectl apply -f user-service.yaml
 kubectl apply -f login-service.yaml
 kubectl apply -f s3-service.yaml
-
 kubectl apply -f ingress.yaml
+kubectl apply -f hpa.yaml
+
+
 
 kubectl get deployments
 kubectl get services
