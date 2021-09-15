@@ -4,7 +4,6 @@ metadata:
   name: admin-service-deployment
   namespace: default
 spec:
-  replicas: 1
   selector:
     matchLabels:
       bb: admin-service

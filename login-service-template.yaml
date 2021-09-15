@@ -4,7 +4,6 @@ metadata:
   name: login-service-deployment
   namespace: default
 spec:
-  replicas: 1
   selector:
     matchLabels:
       bb: login-service

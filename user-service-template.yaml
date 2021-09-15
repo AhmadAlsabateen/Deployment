@@ -4,7 +4,6 @@ metadata:
   name: user-service-deployment
   namespace: default
 spec:
-  replicas: 1
   selector:
     matchLabels:
       bb: user-service
